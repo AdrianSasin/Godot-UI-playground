@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://ctnc2bj44nvpg"]
+
+[node name="Start Menu" type="Node2D" unique_id=1868681964]
+
+[node name="Background" type="ColorRect" parent="." unique_id=947024745]
+offset_right = 360.0
+offset_bottom = 640.0
+color = Color(0.69005686, 0.6807211, 0.92152756, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background" unique_id=1375672180]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -50.0
+offset_right = 100.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="Background/VBoxContainer" unique_id=939295273]
+layout_mode = 2
+size_flags_vertical = 3
+text = "START"
+
+[node name="ExitButton" type="Button" parent="Background/VBoxContainer" unique_id=215890048]
+layout_mode = 2
+size_flags_vertical = 3
+text = "EXIT
+"
