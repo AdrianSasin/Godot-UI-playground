@@ -1,10 +1,31 @@
 [gd_scene format=3 uid="uid://ctnc2bj44nvpg"]
 
-[node name="Start Menu" type="Node2D" unique_id=1868681964]
+[sub_resource type="Theme" id="Theme_ndybt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jwbto"]
+font_size = 30
+
+[node name="Control" type="Control" unique_id=304772807]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Background" type="ColorRect" parent="." unique_id=947024745]
-offset_right = 360.0
-offset_bottom = 640.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.69005686, 0.6807211, 0.92152756, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Background" unique_id=1375672180]
@@ -14,20 +35,34 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -50.0
-offset_right = 100.0
-offset_bottom = 50.0
+offset_left = -200.0
+offset_top = -100.0
+offset_right = 200.0
+offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_ndybt")
+
+[node name="Label" type="Label" parent="Background/VBoxContainer" unique_id=1849962183]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "My game"
+label_settings = SubResource("LabelSettings_jwbto")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="StartButton" type="Button" parent="Background/VBoxContainer" unique_id=939295273]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(3.2247603e-06, 0.6424941, 0.30044267, 1)
+theme_override_font_sizes/font_size = 30
 text = "START"
 
 [node name="ExitButton" type="Button" parent="Background/VBoxContainer" unique_id=215890048]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.8513156, 0.07992574, 0.36239472, 1)
+theme_override_font_sizes/font_size = 30
 text = "EXIT
 "
